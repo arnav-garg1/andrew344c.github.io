@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+body,
+html {
+    font-family: "Montserrat";
+    margin: 0;
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    padding: 2em;
+    .menu-button {
+        width: 24px;
+        float: right;
+        cursor: pointer;
+    }
+    .logo {
+        width: 400px;
+        height: auto;
+    }
+}
+
+nav {
+    display: none;
+    position: absolute;
+    background: black;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    transform: scaleX(0);
+    transform-origin: right;
+    .close-menu-button {
+        width: 24px;
+        float: right;
+        cursor: pointer;
+        opacity: 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 10% auto 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        width: 80%;
+        font-size: 200%;
+        a {
+            color: white;
+            font-weight: bold;
+        }
+        span {
+            color: gray;
+            display: block;
+            font-size: 0.75em;
+            margin-top: 20px;
+        }
+        li {
+            opacity: 0;
+        }
+    }
+    #login {
+        width: 30%;
+        height: 30%;
+        margin: 0 auto;
+    }
+}
+
+.show {
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+    .close-menu-button {
+        animation: show-x 1s 1s forwards;
+    }
+    li:nth-of-type(1) {
+        animation: item-slide 0.5s forwards 1s ease-in-out;
+    }
+    li:nth-of-type(2) {
+        animation: item-slide 0.5s forwards 1.2s ease-in-out;
+    }
+    li:nth-of-type(3) {
+        animation: item-slide 0.5s forwards 1.4s ease-in-out;
+    }
+    li:nth-of-type(4) {
+        animation: item-slide 0.5s forwards 1.6s ease-in-out;
+    }
+}
+
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes item-slide {
+    from {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.front {
+    padding: 4em;
+    background-color: white;
+    #quote {
+        font-size: 4em;
+        margin: 1em auto;
+        width: 70%;
+        &::before {
+            content: ' ';
+            border-top: 5px solid grey;
+            display: block;
+        }
+        h1 {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.1em solid black;
+            animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+    }
+    h2 {
+        margin: 1em auto;
+        margin-bottom: 0;
+        width: 60%;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 70%
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+.main {
+    /*
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    */
+    height: 250vh;
+    width: 100%;
+}
+
+.about {
+    font-size: 120%;
+    background-color: white;
+    margin: 0 auto;
+    width: 80%;
+    height: 40%;
+    .about-title {
+        background-color: white;
+        height: 20%;
+        width: 60%;
+        font-size: 110%;
+        margin: 0 auto;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 4%;
+    }
+    .about-part1 {
+        background-color: white;
+        height: 35%;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 110%;
+        h1 {
+            padding-top: 5%;
+        }
+        img {
+            height: 80%;
+            width: auto;
+            float: left;
+            padding-right: 3px;
+        }
+    }
+    .about-part2 {
+        background-color: white;
+        height: 40%;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 110%;
+        h1 {
+            padding-top: 5%;
+        }
+        img {
+            height: 80%;
+            width: auto;
+            float: right;
+            padding-left: 3px;
+        }
+    }
+}
+
+.gun-map-container {
+    background-color: white;
+    width: 80%;
+    height: 30%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5%;
+    h1 {
+        font-size: 200%;
+        width: 100%;
+        height: 5%;
+        margin-top: 0;
+        margin-bottom: 7%;
+    }
+    #gun-map {
+        width: 80%;
+        height: 85%;
+        margin: 0 auto;
+    }
+}
+
+.built-with {
+    background-color: white;
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    text-align: center;
+    .column {
+        flex-basis: 100%;
+        text-align: center;
+        border: 20px solid white;
+        width: 20%;
+    }
+    .row {
+        padding: 5px;
+        justify-content: center;
+        display: flex;
+        height: 80%;
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 50%;
+            width: auto;
+        }
+    }
+}
+
+.names {
+    text-align: center;
+}

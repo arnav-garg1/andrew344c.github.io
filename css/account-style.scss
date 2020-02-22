@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+body,
+html {
+    font-family: "Montserrat";
+    margin: 0;
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    padding: 2em;
+    .menu-button {
+        width: 24px;
+        float: right;
+        cursor: pointer;
+    }
+    .logo {
+        width: 400px;
+        height: auto;
+    }
+}
+
+nav {
+    display: none;
+    position: absolute;
+    background: black;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    transform: scaleX(0);
+    transform-origin: right;
+    .close-menu-button {
+        width: 24px;
+        float: right;
+        cursor: pointer;
+        opacity: 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 10% auto 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        width: 80%;
+        font-size: 200%;
+        a {
+            color: white;
+            font-weight: bold;
+        }
+        span {
+            color: gray;
+            display: block;
+            font-size: 0.75em;
+            margin-top: 20px;
+        }
+        li {
+            opacity: 0;
+        }
+    }
+}
+
+.show {
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+    .close-menu-button {
+        animation: show-x 1s 1s forwards;
+    }
+    li:nth-of-type(1) {
+        animation: item-slide 0.5s forwards 1s ease-in-out;
+    }
+    li:nth-of-type(2) {
+        animation: item-slide 0.5s forwards 1.2s ease-in-out;
+    }
+    li:nth-of-type(3) {
+        animation: item-slide 0.5s forwards 1.4s ease-in-out;
+    }
+    li:nth-of-type(4) {
+        animation: item-slide 0.5s forwards 1.6s ease-in-out;
+    }
+}
+
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes item-slide {
+    from {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
