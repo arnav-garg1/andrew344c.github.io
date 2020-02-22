@@ -44,7 +44,7 @@
     </header>
     <section class="front">
         <div id="quote">
-            <h1>dandus cheeks</h1>
+            <h1>Argus Security</h1>
         </div>
         <h2>A novel deep learning neural network placed in school security cameras to detect guns, alerting authorities and the community.</h2>
     </section>
@@ -77,7 +77,7 @@
 
         </div>
         <div class="gun-map-container">
-            <h1>Sol Day Sightings</h1>
+            <h1>Gun Detection Locations</h1>
             <div id="gun-map">
 
             </div>
@@ -90,17 +90,23 @@
                 <div class="column">
                     <img src="imgs/tensorflow.png ">
                     <h3>Tensorflow</h3>
-                    <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+                    <p>We used TensorFlow to train our deep learning neural network, as it is a very reliable system, providing us great results.</p>
                 </div>
                 <div class="column">
                     <img src="imgs/firebase.png ">
                     <h3>Firebase</h3>
-                    <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat. </p>
+                    <p>We utilize Google Firebase for two major parts of our project:</p>
+                    <p>1. Firebase Database: We send the latitude and longitude of the location of the gun detection to our Firebase Database 
+                        which then sends this data to our website which places this location on our interactive map. </p>
+                    <p>2. Firebase Cloud Storage: When our deep learning neural network detects a gun, a picture of the sighting is sent to our Firebase Cloud Storage, 
+                        which is only accessible privately by police offers, allows them to see if it truly is a gun detected. While our system is extremely accurate, 
+                        false positives are always possible. By allowing police officers to quickly verify if there is truly any danger, we ensure that precious time and resources 
+                        aren't wasted when another situation could need the ambulances and armed personnel. 
                 </div>
                 <div class="column">
                     <img src="imgs/googlemaps.jpg ">
                     <h3>Google Maps API</h3>
-                    <p>Sed lorem amet ipsum dolor et amet nullam config a fag consequat tempus veroeros sed consequat.</p>
+                    <p>Utilizing the Google Maps API to provide viewers with an interactive map to allow them to easily see the location of every gun sighting.</p>
                 </div>
             </div>
         </div>
